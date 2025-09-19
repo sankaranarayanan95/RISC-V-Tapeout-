@@ -1,98 +1,131 @@
-# RISC-V-Tapeout-
-RISC V tapeout using sky water 130 nm tech lib
+# 🖥️ RISC-V Reference SoC Tapeout Program VSD
+
+<div align="center">
+
+![RISC-V](https://img.shields.io/badge/RISC--V-SoC%20Tapeout-blue?style=for-the-badge&logo=riscv)
+![VSD](https://img.shields.io/badge/VSD-Program-orange?style=for-the-badge)
+![Participants](https://img.shields.io/badge/Participants-3500+-success?style=for-the-badge)
+![India](https://img.shields.io/badge/Made%20in-India-saffron?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjgiIGZpbGw9IiNGRjk5MzMiLz4KPHJlY3QgeT0iOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjgiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMTYiIHdpZHRoPSIyNCIgaGVpZ2h0PSI4IiBmaWxsPSIjMTM4ODA4Ii8+Cjwvc3ZnPgo=)
+
+</div>
+
+Welcome to my journey through the **SoC Tapeout Program VSD**!
+
+This repository documents my **week-by-week progress** with tasks inside each week.
+
+<div align="center">
+
+> *"In this program, we learn to design a System-on-Chip (SoC) from basic RTL to GDSII using open-source tools. Part of India's largest collaborative RISC-V tapeout initiative, empowering 3500+ participants to build silicon and advance the nation's semiconductor ecosystem."*
+
+</div>
+
+<div align="center">
 
 
-# 🚀 RISC-V SoC Design Journey
-
-This repository documents my progress in designing a **System-on-Chip (SoC) based on the RISC-V architecture**. The repo captures learnings, implementations, and outputs from each stage of the design flow — from specification to tapeout.
-
----
-
-## 📌 Objectives
-
-* Understand the **end-to-end SoC design flow**.
-* Build and verify a **RISC-V based processor core** with peripherals.
-* Perform **RTL to GDSII flow** using open-source EDA tools.
-* Document progress and results step by step.
-
----
-
-## 🏗️ Design Flow Overview
-
-1. **Chip Modeling (O1)**
-
-   * Define system specifications.
-   * Create a C-model and verify with testbenches.
-
-2. **RTL Architecting (O2)**
-
-   * Develop RTL (Verilog) for processor + peripherals.
-   * Run functional verification.
-
-3. **Synthesis & Netlist Generation**
-
-   * Convert RTL → Gate-level netlist.
-   * Add standard cells, macros (e.g., SRAM), and analog IPs.
-
-4. **SoC Integration (O3)**
-
-   * Integrate processor, peripherals, and IOs.
-   * Floorplanning, placement, CTS, routing.
-
-5. **Physical Design**
-
-   * Run DRC & LVS checks.
-   * Generate **final GDSII**.
-
-6. **Tapeout**
-
-   * Fabrication → Silicon chip.
+</div>
 
 ---
 
-## 📂 Repository Structure
+## 📅 **Week 0 — Setup & Tools**
 
-```
-.
-├── docs/              # Notes, references, diagrams
-├── rtl/               # RTL design files (Verilog)
-├── tb/                # Testbenches
-├── synthesis/         # Netlists, constraints
-├── pd/                # Physical design outputs (DEF, GDSII, reports)
-└── README.md          # Project overview
-```
+<details>
+<summary><b>Foundation Week:</b> Environment Setup and Tool Installation</summary>
 
----
+This week focuses on preparing the development environment with essential open-source EDA tools for the complete RTL-to-GDSII flow.
 
-## 🧰 Tools & Technologies
+</details>
 
-* **HDL**: Verilog, SystemVerilog
-* **Simulation**: Icarus Verilog / Verilator
-* **Synthesis**: Yosys
-* **Physical Design**: OpenLane, Magic, KLayout
-* **PDK**: SkyWater 130nm
+### 🛠️ **Tasks Overview**
 
----
+| Task | Description | Tools Installed | Status |
+|------|-------------|----------------|---------|
+| **Task 0** | 🛠️ [Tools Installation](Week0/Task0/README.md) | **Complete EDA Toolchain Setup** | ✅ Done |
 
-## 📅 Progress Tracking
+### 📦 **Tools Installed in Week 0 - Task 0**
 
-* [ ] Chip Modeling (O1)
-* [ ] RTL Design & Verification (O2)
-* [ ] Synthesis
-* [ ] SoC Integration (O3)
-* [ ] Physical Design (RTL2GDS)
-* [ ] DRC/LVS Sign-off
-* [ ] Final Tapeout
+<div align="center">
+
+#### **Core RTL Design & Synthesis Tools**
+| Tool | Purpose | Verification |
+|------|---------|--------------|
+| 🧠 **Yosys** | RTL Synthesis & Logic Optimization | ✅ Verified |
+| 📟 **Iverilog** | Verilog Simulation & Compilation | ✅ Verified |
+| 📊 **GTKWave** | Waveform Viewer & Analysis | ✅ Verified |
+| ⚡ **Ngspice** | Analog & Mixed-Signal Simulation | ✅ Verified |
+| 🎨 **Magic VLSI** | Layout Design & DRC Verification | ✅ Verified |
+
+</div>
 
 ---
 
-## 📖 References
+<div align="center">
 
-* [RISC-V ISA Specification](https://riscv.org/specifications/)
-* [OpenLane Documentation](https://github.com/The-OpenROAD-Project/OpenLane)
-* [SkyWater 130nm PDK](https://github.com/google/skywater-pdk)
+## 🎯 **Program Objectives & Scope**
 
+| Aspect | Details |
+|--------|---------|
+| 🎓 **Learning Path** | Complete SoC Design: RTL → Synthesis → Physical Design → Tapeout |
+| 🛠️ **Tools Focus** | Open-Source EDA Ecosystem (Yosys, OpenLane, Magic, etc.) |
+| 🏭 **Industry Relevance** | Real-world semiconductor design methodologies |
+| 🤝 **Collaboration** | Part of India's largest RISC-V tapeout initiative |
+| 📈 **Scale** | 3500+ participants contributing to silicon advancement |
+| 🇮🇳 **National Impact** | Advancing India's semiconductor ecosystem |
 
+</div>
 
-**Sankararayanan V**
-🎓 BE in VLSI Design & Technology | Enthusiast in SoC & Chip Fabrication
+---
+
+## 🙏 **Acknowledgment**
+
+<div align="center">
+
+### 🏆 **Program Leadership & Support**
+
+I am thankful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLSI System Design (VSD)](https://vsdiat.vlsisystemdesign.com/)** for the opportunity to participate in the ongoing **RISC-V SoC Tapeout Program**.
+
+### 🤝 **Institutional Partners**
+
+I also acknowledge the invaluable support of:
+
+| Organization | Role | Impact |
+|--------------|------|--------|
+| 🌐 **RISC-V International** | Open ISA Leadership | Global RISC-V Ecosystem |
+| 🇮🇳 **India Semiconductor Mission (ISM)** | Government Initiative | National Semiconductor Strategy |
+| 🏭 **VLSI Society of India (VSI)** | Industry Body | Professional Development |
+| 🔧 **[Efabless](https://github.com/efabless)** | Open-Source Silicon | Tapeout Platform |
+
+</div>
+
+<div align="center">
+
+### 🌟 **Mission Statement**
+
+> *"Empowering the next generation of semiconductor engineers through hands-on experience with open-source tools and collaborative silicon design."*
+
+</div>
+
+---
+
+<div align="center">
+
+## 📈 **Weekly Progress Tracker**
+
+![Week 0](https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square)
+![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)
+![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)
+
+### 🚀 **Journey Continues...**
+
+Stay tuned for upcoming weeks covering RTL design, synthesis, physical design, and final tapeout preparation!
+
+---
+
+**🔗 Program Links:**
+[![VSD Website](https://img.shields.io/badge/VSD-Official%20Website-blue?style=flat-square)](https://vsdiat.vlsisystemdesign.com/)
+[![RISC-V](https://img.shields.io/badge/RISC--V-International-green?style=flat-square)](https://riscv.org/)
+[![Efabless](https://img.shields.io/badge/Efabless-Platform-orange?style=flat-square)](https://efabless.com/)
+
+---
+
+**👨‍💻 Participant:** Sankararayanan V  
+📧 sanka.naren2005@gmail.com
