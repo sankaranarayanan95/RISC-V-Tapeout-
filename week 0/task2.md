@@ -21,5 +21,5 @@
 ![Yosys](images/magic_installation.png)
 
 
-## **Tool version. magic** :
+## **6. Tool version** :
 ![Yosys](images/tools_update.png)
