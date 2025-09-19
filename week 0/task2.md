@@ -4,5 +4,22 @@
 
 ![Yosys terminal](images/yosys_installation.png)
 
+
 ## **2. iverilog** :
 ![Yosys](images/iverilog_installation.png)
+
+
+## **3. gtkwave** :
+![Yosys](images/gtkwave_installation.png)
+
+
+## **4. ngspice** :
+![Yosys](images/ngspice_installation.png)
+
+
+## **5. magic** :
+![Yosys](images/magic_installation.png)
+
+
+## **Tool version. magic** :
+![Yosys](images/tools_update.png)
